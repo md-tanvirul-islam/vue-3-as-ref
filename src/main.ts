@@ -18,7 +18,7 @@ library.add(fas);
 dom.watch();
 /**Fontawesome end */
 
-import "admin-lte";
+// import "./assets/adminlte.js";
 
 const app = createApp(App)
 
