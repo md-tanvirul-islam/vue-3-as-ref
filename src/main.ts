@@ -1,12 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+
+import "./assets/dependant.scss";
+
 /**Jquery and Bootstrap Start */
 import jquery from "jquery";
 window.$ = window.jquery = window.jQuery = jquery;
 import "popper.js";
 import "bootstrap";
-import "@/assets/dependant.scss";
 /**Jquery and Bootstrap end */
 
 /**Fontawesome Start */
@@ -15,6 +17,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas);
 dom.watch();
 /**Fontawesome end */
+
+import "admin-lte";
 
 const app = createApp(App)
 
