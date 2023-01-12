@@ -2,15 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-import "./assets/dependant.scss";
-
-/**Jquery and Bootstrap Start */
-import jquery from "jquery";
-window.$ = window.jquery = window.jQuery = jquery;
-import "popper.js";
-import "bootstrap";
-/**Jquery and Bootstrap end */
-
 /**Fontawesome Start */
 import { dom, library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -22,10 +13,18 @@ library.add(fas, fab, far, faLock, faEnvelope, faFacebook, faGooglePlus);
 dom.watch();
 /**Fontawesome end */
 
-// import "./assets/adminlte.js";
+/**Jquery and Bootstrap Start */
+import jquery from "jquery";
+window.$ = window.jquery = window.jQuery = jquery;
+import "popper.js";
+import "bootstrap";
+/**Jquery and Bootstrap end */
 
-const app = createApp(App)
+import "./assets/parent.css";
+import "./assets/parent.js";
 
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(router);
+
+app.mount('#app');
